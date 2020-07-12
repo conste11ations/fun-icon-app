@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch } from "@types/react-redux";
 import { bindActionCreators } from "redux";
 
 export function useActions(actions: any, deps?: any): any {
