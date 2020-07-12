@@ -1,3 +1,4 @@
+/// <reference path="../typings/configureStore.d.ts" />
 import { createBrowserHistory } from "history";
 import * as localforage from "localforage";
 import { applyMiddleware, createStore } from "redux";

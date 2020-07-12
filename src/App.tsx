@@ -1,5 +1,5 @@
 // prettier-ignore
-/// <reference path="../typings/misc.d.ts" />
+/// <reference path="../typings/App.d.ts" />
 import { AppBar, Badge, Divider, Drawer as DrawerMui, Hidden, IconButton, List, ListItem, ListItemIcon, ListItemText, Toolbar, Typography, useMediaQuery } from "@material-ui/core";
 import { Theme } from "@material-ui/core/styles";
 import FormatListNumberedIcon from "@material-ui/icons/FormatListNumbered";
@@ -86,8 +86,7 @@ function App() {
 								color="inherit"
 								noWrap={isMobile}
 							>
-								Create-React-App with Material-UI, Typescript,
-								Redux and Routing
+								Fun Icon Shop
 							</Typography>
 						</Toolbar>
 					</AppBar>
@@ -142,6 +141,7 @@ function TodoIcon(props: { todoList: Todo[] }) {
 const drawerWidth = 240;
 const useStyles = makeStyles((theme: Theme) => ({
 	root: {
+		background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
 		width: "100%",
 		height: "100%",
 		zIndex: 1,
@@ -154,8 +154,10 @@ const useStyles = makeStyles((theme: Theme) => ({
 		height: "100%",
 	},
 	appBar: {
+		background: "none",
 		zIndex: theme.zIndex.drawer + 1,
 		position: "absolute",
+		color: "purple",
 	},
 	navIconHide: {
 		[theme.breakpoints.up("md")]: {
@@ -173,7 +175,7 @@ const useStyles = makeStyles((theme: Theme) => ({
 		},
 	},
 	content: {
-		backgroundColor: theme.palette.background.default,
+		background: "none",
 		width: "100%",
 		height: "calc(100% - 56px)",
 		marginTop: 56,
