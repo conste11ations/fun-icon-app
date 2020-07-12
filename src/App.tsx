@@ -1,4 +1,5 @@
 // prettier-ignore
+/// <reference path="../../typings/misc.d.ts" />
 import { AppBar, Badge, Divider, Drawer as DrawerMui, Hidden, IconButton, List, ListItem, ListItemIcon, ListItemText, Toolbar, Typography, useMediaQuery } from "@material-ui/core";
 import { Theme } from "@material-ui/core/styles";
 import FormatListNumberedIcon from "@material-ui/icons/FormatListNumbered";
