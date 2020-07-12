@@ -14,6 +14,7 @@ import { Todo } from "./model";
 import { HomePage, TodoPage } from "./pages";
 import { RootState } from "./reducers/index";
 import { withRoot } from "./withRoot";
+import CoolToneBackground from "./images/background-cooltone.png";
 
 function Routes() {
 	const classes = useStyles();
@@ -142,6 +143,10 @@ const drawerWidth = 240;
 const useStyles = makeStyles((theme: Theme) => ({
 	root: {
 		background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
+		backgroundImage: `url(${CoolToneBackground})`,
+		backgroundPosition: 'center', 
+		backgroundSize: 'cover', 
+		backgroundRepeat: 'no-repeat',
 		width: "100%",
 		height: "100%",
 		zIndex: 1,
@@ -154,6 +159,7 @@ const useStyles = makeStyles((theme: Theme) => ({
 		height: "100%",
 	},
 	appBar: {
+		boxShadow: "none", //removes nav bar dropshadow
 		background: "none",
 		zIndex: theme.zIndex.drawer + 1,
 		position: "absolute",
