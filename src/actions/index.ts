@@ -1,3 +1,4 @@
+/// <reference path="../../typings/misc.d.ts" />
 import { useMemo } from "react";
 import { useDispatch } from "react-redux";
 import { bindActionCreators } from "redux";
