@@ -169,7 +169,7 @@ const useStyles = makeStyles((theme: Theme) => ({
 		background: "none",
 		zIndex: theme.zIndex.drawer + 1,
 		position: "absolute",
-		color: "pink",
+		color: "#f44336",
 	},
 	toolBar: {
 		display: "flex",

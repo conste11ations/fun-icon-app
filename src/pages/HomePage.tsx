@@ -2,7 +2,7 @@ import { Button, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
 import * as React from "react";
 import { useSelector } from "react-redux";
-import { HomeBox } from "../components";
+import { HomeBox, IconBox, IconBoxList } from "../components";
 import { RootState } from "../reducers";
 
 export function HomePage() {
@@ -20,6 +20,9 @@ export function HomePage() {
 			</Typography>
 			<div className={classes.centerContainer}>
 				<HomeBox size={300} color={boxColor} />
+				<IconBox>
+				</IconBox>
+				<IconBoxList></IconBoxList>
 				<Button
 					className={classes.button}
 					onClick={onButtonClick}
