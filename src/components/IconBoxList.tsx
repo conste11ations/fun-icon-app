@@ -6,7 +6,7 @@ interface Props {
 
 }
 
-function IconList(props: Props) {
+function IconBoxList(props: Props) {
 
 const {  } = props;
 const classes = useStyles();
@@ -25,4 +25,4 @@ root: {
 },
 });
 
-export default IconList;
+export default IconBoxList;

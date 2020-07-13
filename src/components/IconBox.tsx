@@ -1,0 +1,28 @@
+// prettier-ignore
+import { makeStyles } from '@material-ui/core';
+import * as React from 'react';
+
+interface Props {
+
+}
+
+function IconBox(props: Props) {
+
+const {  } = props;
+const classes = useStyles();
+
+return (
+<div className={classes.root}>
+<div />
+</div>
+);
+}
+
+const useStyles = makeStyles({
+
+root: {
+
+},
+});
+
+export default IconBox;

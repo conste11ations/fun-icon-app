@@ -5,6 +5,8 @@ import { Theme } from "@material-ui/core/styles";
 import FormatListNumberedIcon from "@material-ui/icons/FormatListNumbered";
 import HomeIcon from "@material-ui/icons/Home";
 import MenuIcon from "@material-ui/icons/Menu";
+import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import { makeStyles } from "@material-ui/styles";
 import * as React from "react";
 import { useSelector } from "react-redux";
@@ -73,7 +75,7 @@ function App() {
 			<div className={classes.root}>
 				<div className={classes.appFrame}>
 					<AppBar className={classes.appBar}>
-						<Toolbar>
+						<Toolbar className={classes.toolBar}>
 							<IconButton
 								color="inherit"
 								aria-label="open drawer"
@@ -89,39 +91,43 @@ function App() {
 							>
 								Fun Icon Shop
 							</Typography>
+							<div>
+								<AccountCircleIcon />
+							<ShoppingCartIcon />
+							</div>
 						</Toolbar>
 					</AppBar>
-					<Hidden mdUp>
-						<DrawerMui
-							variant="temporary"
-							anchor={"left"}
-							open={mobileOpen}
-							classes={{
-								paper: classes.drawerPaper,
-							}}
-							onClose={handleDrawerToggle}
-							ModalProps={{
-								keepMounted: true, // Better open performance on mobile.
-							}}
-						>
-							<Drawer todoList={todoList} />
-						</DrawerMui>
-					</Hidden>
-					<Hidden smDown>
-						<DrawerMui
-							variant="permanent"
-							open
-							classes={{
-								paper: classes.drawerPaper,
-							}}
-						>
-							<Drawer todoList={todoList} />
-						</DrawerMui>
-					</Hidden>
-					<Routes />
-				</div>
+				<Hidden mdUp>
+					<DrawerMui
+						variant="temporary"
+						anchor={"left"}
+						open={mobileOpen}
+						classes={{
+							paper: classes.drawerPaper,
+						}}
+						onClose={handleDrawerToggle}
+						ModalProps={{
+							keepMounted: true, // Better open performance on mobile.
+						}}
+					>
+						<Drawer todoList={todoList} />
+					</DrawerMui>
+				</Hidden>
+				<Hidden smDown>
+					<DrawerMui
+						variant="permanent"
+						open
+						classes={{
+							paper: classes.drawerPaper,
+						}}
+					>
+						<Drawer todoList={todoList} />
+					</DrawerMui>
+				</Hidden>
+				<Routes />
 			</div>
-		</Router>
+			</div>
+		</Router >
 	);
 }
 
@@ -144,8 +150,8 @@ const useStyles = makeStyles((theme: Theme) => ({
 	root: {
 		background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
 		backgroundImage: `url(${CoolToneBackground})`,
-		backgroundPosition: 'center', 
-		backgroundSize: 'cover', 
+		backgroundPosition: 'center',
+		backgroundSize: 'cover',
 		backgroundRepeat: 'no-repeat',
 		width: "100%",
 		height: "100%",
@@ -163,7 +169,12 @@ const useStyles = makeStyles((theme: Theme) => ({
 		background: "none",
 		zIndex: theme.zIndex.drawer + 1,
 		position: "absolute",
-		color: "purple",
+		color: "pink",
+	},
+	toolBar: {
+		display: "flex",
+		justifyContent: "space-between",
+		fontSize: "large",
 	},
 	navIconHide: {
 		[theme.breakpoints.up("md")]: {
